@@ -1,0 +1,43 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.quiz {
+    background-image: url("./assets/world.png");
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 {
+    color: darkgray;
+}
+
+.items {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    border-radius: 5%;
+    background-image: linear-gradient(lightpink, hotpink);
+    height: 6vw;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item p {
+    text-align: center;
+    color: beige;
+}
