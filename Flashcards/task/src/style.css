@@ -21,23 +21,51 @@ h1 {
 
 .items {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 20vw;
+    width: 20vw;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.item {
-    border-radius: 5%;
-    background-image: linear-gradient(lightpink, hotpink);
+.container {
+}
+
+.card {
+    position: relative;
     height: 6vw;
     width: 6vw;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+
+.front, .back {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    color: beige;
+    text-align: center;
 }
 
-.item p {
-    text-align: center;
-    color: beige;
+.front {
+    background-image: linear-gradient(lightpink, hotpink);
+    backface-visibility: hidden;
+    z-index: 1;
 }
+
+.back {
+    background-image: linear-gradient(lightblue, blueviolet);
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.container:hover .card {
+    transform: rotateY(180deg);
+}
+
